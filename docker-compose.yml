@@ -1,0 +1,12 @@
+services:
+  todo:
+    build: .
+    container_name: selfhosted-todo
+    restart: unless-stopped
+    ports:
+      - "3737:3737"
+    volumes:
+      - todo_data:/data
+
+volumes:
+  todo_data:
