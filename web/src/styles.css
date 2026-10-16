@@ -2,7 +2,7 @@
   --fg: #fff;
   --dim: rgba(255, 255, 255, 0.55);
   --line: rgba(255, 255, 255, 0.28);
-  --panel: rgba(0, 0, 0, 0.78);
+  --panel: rgba(0, 0, 0, 0.5);
   --sans: 'Space Grotesk Variable', system-ui, sans-serif;
   --mono: 'Space Mono', ui-monospace, monospace;
   color-scheme: dark;
@@ -13,10 +13,13 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+html {
+  background: #000;
+}
+
 html,
 body {
   margin: 0;
-  background: #000;
   color: var(--fg);
   font-family: var(--sans);
   font-size: 16px;
@@ -28,7 +31,7 @@ body::before {
   position: fixed;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/bg.png') center / cover no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('/bg.png') center / cover no-repeat;
 }
 
 button,
@@ -72,6 +75,8 @@ button {
 
 h1 {
   margin: 0;
+  background: #000;
+  padding: 8px 14px 8px 18px;
   font-size: clamp(2.2rem, 9vw, 3.4rem);
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -99,8 +104,8 @@ h1 {
 
 .panel {
   background: var(--panel);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   border: 1px solid var(--line);
   padding: 14px;
 }
